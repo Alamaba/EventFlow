@@ -7,7 +7,8 @@
       "Bash(npm install *)",
       "Bash(npm run *)",
       "PowerShell(New-Item -ItemType File -Path \"C:\\\\Users\\\\user\\\\Desktop\\\\gestion_event\\\\resources\\\\views\\\\welcome.blade.php\" -Force)",
-      "Bash(php -r \"echo storage_path\\('app/public'\\);\")"
+      "Bash(php -r \"echo storage_path\\('app/public'\\);\")",
+      "Bash(not exist *)"
     ]
   }
 }

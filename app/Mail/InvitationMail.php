@@ -29,9 +29,10 @@ class InvitationMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.invitation',
+            view: 'emails.invitation',
             with: [
-                'event' => $this->guest->event,
+                'guest'     => $this->guest,
+                'event'     => $this->guest->event,
                 'ticketUrl' => route('ticket.show', $this->ticket->uuid),
             ],
         );

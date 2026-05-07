@@ -9,7 +9,6 @@
         @if($event->status === 'brouillon')
         <form action="{{ route('organisateur.events.publish', $event) }}" method="POST" class="inline">
             @csrf
-            @method('PATCH')
             <button type="submit"
                 class="inline-flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors shadow-sm">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
