@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(\\(Get-ChildItem -Path \"c:\\\\Users\\\\user\\\\Desktop\\\\gestion_event\" -Directory\\).Name)",
+      "Bash(composer require *)",
+      "Bash(php artisan *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "PowerShell(New-Item -ItemType File -Path \"C:\\\\Users\\\\user\\\\Desktop\\\\gestion_event\\\\resources\\\\views\\\\welcome.blade.php\" -Force)",
+      "Bash(php -r \"echo storage_path\\('app/public'\\);\")"
+    ]
+  }
+}
