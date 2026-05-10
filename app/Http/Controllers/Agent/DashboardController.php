@@ -24,6 +24,18 @@ class DashboardController extends Controller
         return view('agent.dashboard', compact('events', 'stats'));
     }
 
+    public function events()
+    {
+        $user = auth()->user();
+        $events = $user->assignedEvents()
+            ->with('organisateur')
+            ->withCount('guests')
+            ->orderBy('date_start')
+            ->get();
+
+        return view('agent.events.index', compact('events'));
+    }
+
     public function guestList(Event $event)
     {
         $user = auth()->user();

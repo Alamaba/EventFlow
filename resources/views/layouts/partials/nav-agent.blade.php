@@ -16,10 +16,10 @@
     <p class="px-3 text-[10px] font-bold text-slate-500 uppercase tracking-widest">Activité</p>
 </div>
 
-<a href="{{ route('agent.dashboard') }}#events"
+<a href="{{ route('agent.events.index') }}"
    class="relative flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-150
-          {{ request()->routeIs('agent.events.*') ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/25' : 'text-slate-400 hover:bg-slate-800 hover:text-white' }}">
-    @if(request()->routeIs('agent.events.*'))
+          {{ request()->routeIs('agent.events.index') ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/25' : 'text-slate-400 hover:bg-slate-800 hover:text-white' }}">
+    @if(request()->routeIs('agent.events.index'))
         <span class="absolute left-0 inset-y-2 w-0.5 bg-indigo-300 rounded-r-full"></span>
     @endif
     <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

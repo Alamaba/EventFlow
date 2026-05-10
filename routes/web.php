@@ -66,6 +66,7 @@ Route::middleware(['auth', 'role:organisateur'])->prefix('organisateur')->name('
 // ===================== AGENT =====================
 Route::middleware(['auth', 'role:agent'])->prefix('agent')->name('agent.')->group(function () {
     Route::get('/dashboard', [AgentDashboard::class, 'index'])->name('dashboard');
+    Route::get('/events', [AgentDashboard::class, 'events'])->name('events.index');
     Route::get('/events/{event}/scan', [ScanController::class, 'index'])->name('events.scan');
     Route::post('/scan', [ScanController::class, 'scan'])->name('scan.process');
     Route::get('/events/{event}/guests', [AgentDashboard::class, 'guestList'])->name('events.guests');
